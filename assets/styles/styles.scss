@@ -20,8 +20,46 @@ body {
   align-items: center;
   justify-content: space-between;
   background: $white;
-  padding: 2em 9%;
-  box-shadow: 0 .5em 1em rgba(0, 0, 0, .1);
+  padding: 2rem 9%;
+  box-shadow: 0 .5em 1rem rgba(0, 0, 0, .1);
+
+  .logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: $gray;
+    i {
+      padding-right: .5rem;
+      color: $red;
+    }
+  }
+
+  .navbar {
+    a {
+      font-size: 2rem;
+      margin-left: 2rem;
+      transition: color 250ms ease-in;
+      color: $gray;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  #menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: $gray;
+    border: .1rem solid $gray;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+    transition: background 200ms ease-in, color 250ms ease-out;
+    &:hover {
+      color: $white;
+      border-color: transparent;
+      background: $red;
+    }
+  }
 }
 
 

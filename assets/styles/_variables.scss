@@ -1,0 +1,23 @@
+// typography initialization 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$red: #ff3838;
+$white: #fff;
+$alt_white: #f7f7f7;
+
+
+// reset css 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+
+  &::selection {
+    background: $red;
+    color: $white;
+  }
+}
+

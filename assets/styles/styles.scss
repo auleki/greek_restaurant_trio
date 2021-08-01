@@ -15,6 +15,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   right: 0;
   display: flex;
   align-items: center;
@@ -62,6 +63,164 @@ body {
   }
 }
 
+.section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  padding: .8rem 4rem;
+  border: .25em solid $red;
+  color: $red;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: .2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: $red;
+    transition: 300ms linear;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  background: url(../images/home-bg.jpg) no-repeat;
+
+  .content {
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+    color: $gray;
+  }
+
+  .section__title {
+    font-size: 5rem;
+    text-transform: capitalize;
+  }
+
+  .section__paragraph {
+    font-size: 1.7rem;
+  }
+
+  .image {
+    flex: 1 1 40rem;
+
+    img {
+      width: 100%;
+      padding: 1rem;
+      animation: float 2000ms linear infinite;
+    }
+  }
+}
+
+ /* STYLING SPECIALTY SECTION  */
+ .heading {
+   text-align: center;
+   font-size: 3.5rem;
+   padding: 1rem;
+   color: $gray;
+
+   span {
+     color: $red;
+   }
+ }
+
+ .specialty {
+   .box_container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+     .box {
+       flex: 1 1 40rem;
+       position: relative;
+       overflow: hidden;
+       box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+       border: .1rem solid rgba(0, 0, 0, .3);
+       border-radius: .5rem;
+       cursor: pointer;
+       transition: box-shadow 200ms ease-in,
+       border 300ms ease-out,
+       transform 200ms ease-out;
+       &:hover {
+        box-shadow: none;
+        border-color: transparent;
+        transform: translateY(.3rem);
+        .image {
+          top: 0;
+        }
+       }
+       
+       .content {
+         text-align: center;
+         background: $white;
+         padding: 2rem;
+         img {
+           margin: 1.5rem 0;
+         }
+         h3 {
+           font-size: 2.5rem;
+           color: $gray;
+         }
+         p {
+           font-size: 1.6rem;
+           color: $gray;
+           padding: 1rem 0;
+         }
+       }
+       .image {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         transition: top 200ms ease-in;
+         position: absolute;
+         top: -100%;
+         left: 0;
+       }
+     }
+   }
+ }
+
+
+
+ /* STYLING SPECIALTY SECTION  */
+ /* STYLING SPECIALTY SECTION  */
+ /* STYLING SPECIALTY SECTION  */
+ /* STYLING SPECIALTY SECTION  */
+ /* STYLING SPECIALTY SECTION  */
+ /* STYLING SPECIALTY SECTION  */
+ /* STYLING SPECIALTY SECTION  */
+ 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(3rem);
+  }
+}
 // media queries 
 
 @media (max-width: 991px) {
@@ -70,6 +229,10 @@ body {
   }
 
   .header {
+    padding: 2rem;
+  }
+
+  .section {
     padding: 2rem;
   }
 }
@@ -87,6 +250,8 @@ body {
       border-top: .1rem solid rgba(0, 0, 0, .1);
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       transition: clip-path 250ms ease-in;
+      background: $white;
+      
       a {
         margin: 1.5rem;
         padding: 1.5rem;
@@ -94,6 +259,7 @@ body {
         border: .2rem solid rgba(0, 0, 0, .1);
         border-left: .5rem solid $red;
         border-radius: .2em;
+        background: $white;
       }
 
       &.active {

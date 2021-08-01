@@ -79,17 +79,22 @@ body {
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 0.8rem 4rem;
   border: 0.25em solid #ff3838;
   color: #ff3838;
   cursor: pointer;
   font-size: 2rem;
   border-radius: 0.2rem;
+  gap: 0.5rem;
   position: relative;
   overflow: hidden;
   z-index: 0;
   margin-top: 1rem;
+}
+.btn i {
+  transition: 200ms ease-out;
 }
 .btn::before {
   content: "";
@@ -108,6 +113,12 @@ body {
 }
 .btn:hover {
   color: #fff;
+}
+.btn:hover i {
+  transform: translateX(1rem) scale(1.4);
+}
+.btn.order:hover i {
+  transform: rotateZ(18deg);
 }
 
 .home {

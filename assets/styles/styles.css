@@ -213,7 +213,53 @@ body {
   left: 0;
 }
 
-/* STYLING SPECIALTY SECTION  */
+/* STYLING POPULAR SECTION  */
+.popular .box_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.popular .box_container .box {
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 0.5rem;
+  text-align: center;
+  flex: 1 1 30rem;
+}
+.popular .box_container .box h3 {
+  color: #666;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+.popular .box_container .box .stars i {
+  color: #ffd700;
+  font-size: 1.7rem;
+  padding: 1rem 0.1rem;
+}
+.popular .box_container .box .price {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  background: #ff3838;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.popular .box_container .box .price:hover {
+  background: #ff4747;
+}
+.popular .box_container .box img {
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
 /* STYLING SPECIALTY SECTION  */
 /* STYLING SPECIALTY SECTION  */
 /* STYLING SPECIALTY SECTION  */

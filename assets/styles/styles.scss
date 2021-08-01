@@ -270,10 +270,32 @@ body {
    }
  }
 
+ /* STYLING STEPS SECTION  */
+ .steps {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   padding: 1rem;
+   .box {
+     flex: 1 1 25rem;
+     padding: 1rem;
+     text-align: center;
+     img {
+       border-radius: 50%;
+       border: 1rem solid $white;
+       box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+     }
+     h3 {
+       font-size: 2rem;
+       color: $gray;
+       padding: 1rem 0;
+     }
+   }
+ }
+
  
 
 
- /* STYLING SPECIALTY SECTION  */
  /* STYLING SPECIALTY SECTION  */
  /* STYLING SPECIALTY SECTION  */
  /* STYLING SPECIALTY SECTION  */

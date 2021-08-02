@@ -418,7 +418,11 @@ body {
          justify-content: space-between;
          flex-wrap: wrap;
        }
-
+       .btn {
+         background: none;
+         width: 100%;
+         justify-content: center;
+       }
        .input_box input, textarea {
          padding: 1rem;
          margin: 1rem 0;

@@ -391,11 +391,122 @@ body {
    }
  }
 
- /* STYLING SPECIALTY SECTION  */
- /* STYLING SPECIALTY SECTION  */
- /* STYLING SPECIALTY SECTION  */
+ /* STYLING ORDER SECTION  */
+ .order {
+   .row {
+     padding: 2rem;
+     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+     background: $white;
+     display: flex;
+     flex-wrap: wrap;
+     border-radius: .5rem;
+     gap: 1.5rem;
+     .image {
+       flex: 1 1 30rem;
+       img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         border-radius: .5rem;
+       }
+     }
+     .order_form {
+       flex: 1 1 50rem;
+       padding: 1rem;
+       .input_box {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+       }
+
+       .input_box input, textarea {
+         padding: 1rem;
+         margin: 1rem 0;
+         color: $gray;
+         border: .1rem solid rgba(0, 0, 0, .3);
+         border-radius: .5rem;
+         width: 49%;
+         font-size: 1.7rem;
+       }
+       textarea {
+         width: 100%;
+         resize: none;
+         height: 15rem;
+       }
+     }
+   }
+ }
  
-@keyframes float {
+ 
+ /* STYLING FOOTER SECTION  */
+ .footer {
+   background: $black;
+   text-align: center;
+   .share {
+     display: flex;
+     gap: 1.5rem;
+     justify-content: center;
+     flex-wrap: wrap;
+   }
+   .credit {
+     padding: 2.5rem 1rem;
+     color: $white;
+     font-size: 2rem;
+     font-weight: 400;
+     span {
+       color: $red;
+     }
+   }
+ }
+ 
+ 
+ /* STYLING SCROLL TO TOP SECTION  */
+ #scroll-top {
+   position: fixed;
+  //  top: -120%;
+   transition: opacity 1000ms linear;
+   right: 2rem; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 5rem;
+   width: 5rem;
+   font-size: 4rem;
+   background: $red;
+   color: $white;
+   border-radius: 50%;
+   transition: 200ms ease-in;
+   opacity: 0;
+   &:hover {
+     background: $black;
+     color: $white;
+   }
+   &.active {
+     top: calc(100% - 12rem);
+     opacity: 1;
+   }
+ }
+ 
+ /* STYLING LOADER SECTION  */
+ .loader_container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+   background-color: $white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   &.fade-out {
+     top: -120%;
+   }
+ }
+ 
+ 
+ /* STYLING SCROLL TO TOP SECTION  */
+ @keyframes float {
   0%, 100% {
     transform: translateY(0)
   }
@@ -451,8 +562,12 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .order .row .order_form .input_box input {
+    width: 100%;
   }
 }
